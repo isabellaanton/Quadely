@@ -1,0 +1,379 @@
+:root {
+  --brand-cream: #F6F0E4;
+  --brand-pink: #E593D1;
+  --brand-blue: #89A9D2;
+  --brand-yellow: #E5DA5F;
+  --brand-navy: #091A58;
+  --brand-black: #000000;
+}
+
+.redesigned-app { background: var(--canvas-color); color: var(--brand-navy); }
+.redesigned-app .button.primary { background: var(--brand-navy); border-color: var(--brand-navy); }
+.redesigned-app .sidebar { background: var(--canvas-color); border-color: color-mix(in srgb, var(--chart-color) 20%, transparent); }
+.redesigned-app .logo-brand {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 3px 2px 30px;
+}
+.logo-brand img { display: block; width: min(158px, 100%); height: auto; }
+.redesigned-app .brand-icon { display: none; }
+.redesigned-app .redesigned-main { background: var(--canvas-color); }
+.redesigned-app .column {
+  background: color-mix(in srgb, var(--canvas-color) 58%, white);
+  border-color: color-mix(in srgb, var(--canvas-color) 70%, #d8d5cf);
+}
+.redesigned-app .stat-icon.violet { background: var(--brand-pink); color: var(--brand-navy); }
+.redesigned-app .stat-icon.orange { background: var(--brand-yellow); color: var(--brand-navy); }
+.redesigned-app .stat-icon.blue { background: var(--brand-blue); color: var(--brand-navy); }
+.redesigned-app .bar-track i { background: var(--chart-color); }
+.redesigned-app .success-insight { border-color: #383b44; }
+.redesigned-app .sidebar-success > i > b { background: var(--chart-color); }
+.redesigned-app .today-badge { color: var(--brand-navy); }
+.theme-control { position: relative; }
+.theme-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e7e2d8;
+  border-radius: 9px;
+  background: #fff;
+  color: #535c65;
+  padding: 8px 11px;
+  font-size: 11px;
+}
+.theme-trigger i { width: 15px; height: 15px; border: 1px solid #d8d4cc; border-radius: 50%; }
+.theme-trigger span { color: #898f89; }
+.theme-popover {
+  position: absolute;
+  z-index: 8;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 228px;
+  padding: 14px;
+  border: 1px solid #e7e2d8;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 14px 38px #20251d1b;
+}
+.theme-popover > strong,.theme-popover > span { display: block; }
+.theme-popover > strong { color: var(--brand-navy); font-size: 12px; }
+.theme-popover > span { margin-top: 3px; color: #8d938d; font-size: 10px; }
+.theme-swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; margin-top: 13px; }
+.theme-swatches button {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #dedbd5;
+  color: var(--brand-navy);
+  font-size: 13px;
+}
+.theme-swatches button.selected { box-shadow: 0 0 0 2px var(--brand-navy); }
+@media(max-width:800px) {
+  .redesigned-app .logo-brand { width: 86px; flex: 0 0 86px; padding: 0; }
+  .logo-brand img { width: 86px; }
+  .redesigned-app .sidebar { background: var(--brand-cream); }
+  .theme-popover { right: 0; }
+}
+
+/* Quadely's background selector changes the canvas across the whole app.
+   These stronger color choices retain dark, readable text and drive the chart tint. */
+.redesigned-app .logo-brand img { width: min(164px, 100%); }
+.redesigned-app .sidebar { border-color: color-mix(in srgb, var(--chart-color) 18%, transparent); }
+.redesigned-app .nav-icon { display: none; }
+.redesigned-app .nav { color: var(--brand-navy); font-weight: 600; }
+.redesigned-app .nav.active { color: var(--brand-navy); background: color-mix(in srgb, var(--chart-color) 12%, transparent); }
+.redesigned-app .section-label,
+.redesigned-app .eyebrow,
+.redesigned-app .subtitle,
+.redesigned-app .crumb,
+.redesigned-app .profile-stat small,
+.redesigned-app .profile-stat span:not(.stat-icon),
+.redesigned-app .card-note,
+.redesigned-app .due,
+.redesigned-app .dark-kicker,
+.redesigned-app .legend-row small,
+.redesigned-app .success-insight,
+.redesigned-app .week-footer,
+.redesigned-app .bar-day small,
+.redesigned-app .bar-count,
+.redesigned-app .today-event div small,
+.redesigned-app .empty-today p,
+.redesigned-app .calendar-page .day-heading > span,
+.redesigned-app .time-axis span,
+.redesigned-app .mini-weekdays span,
+.redesigned-app .today-stats span,
+.redesigned-app .upcoming-item small { color: #344762; }
+.redesigned-app .column { background: color-mix(in srgb, var(--canvas-color) 72%, white); }
+.redesigned-app .card { background: #EAF1F8; border-color: color-mix(in srgb, var(--brand-blue) 65%, white); }
+.redesigned-app .card h3,
+.redesigned-app .profile-stat strong,
+.redesigned-app .board-head h1,
+.redesigned-app .dashboard-header h1,
+.redesigned-app .calendar-toolbar h1,
+.redesigned-app .card-heading h2,
+.redesigned-app .month-cell > b,
+.redesigned-app .day-heading b { color: var(--brand-navy); }
+.redesigned-app .success-card,
+.redesigned-app .moment-card { background: var(--brand-navy); color: var(--brand-cream); }
+.redesigned-app .success-card .dark-kicker,
+.redesigned-app .moment-card .dark-kicker,
+.redesigned-app .success-card-head p,
+.redesigned-app .moment-card p,
+.redesigned-app .success-card .legend-row small,
+.redesigned-app .success-card .success-insight { color: #E4EAF5; }
+.redesigned-app .success-card h2,
+.redesigned-app .moment-card h2,
+.redesigned-app .success-card .legend-row,
+.redesigned-app .success-card .legend-row b,
+.redesigned-app .success-card .success-insight b { color: #fff; }
+.redesigned-app .moment-card > button { background: var(--chart-color); border-color: color-mix(in srgb, var(--chart-color) 80%, white); color: #fff; }
+.redesigned-app .stat-icon { width: 12px; height: 12px; flex-basis: 12px; border-radius: 4px; margin-top: 4px; }
+.redesigned-app .profile-stat { gap: 9px; }
+.redesigned-app .profile-stat small,
+.redesigned-app .profile-stat span:not(.stat-icon),
+.redesigned-app .crumb,
+.redesigned-app .eyebrow,
+.redesigned-app .sidebar-label { color: #344762; }
+.theme-trigger { color: var(--brand-navy); font-weight: 600; }
+.theme-popover > span { color: #344762; }
+.redesigned-app .today-stats > div { background: #EAF1F8; }
+.redesigned-app .day-lane { background: #fff; }
+.redesigned-app .calendar-event { border-left-color: var(--chart-color); }
+.redesigned-app .calendar-event:nth-of-type(n) { border-left-color: var(--chart-color); }
+.redesigned-app .mini-grid button.has-holiday:not(.selected) { box-shadow: inset 0 0 0 1px var(--chart-color); }
+.redesigned-app .mini-grid button.has-holiday::before { content: ''; position: absolute; inset: 2px; border-radius: 50%; background: color-mix(in srgb, var(--chart-color) 12%, transparent); z-index: -1; }
+.redesigned-app .holiday-key { color: #344762; }
+.redesigned-app .holiday-key i { background: var(--chart-color); }
+.redesigned-app .holiday-event,
+.redesigned-app .day-heading small { color: var(--chart-color); background: color-mix(in srgb, var(--chart-color) 12%, white); }
+.redesigned-app .month-cell { background: #fff; }
+.redesigned-app .month-cell.outside { background: #F7F9FC; }
+.redesigned-app .month-cell.has-holiday { background: #F4F7FB; }
+.redesigned-app .column-menu { background: white; }
+.redesigned-app .column-menu strong,
+.redesigned-app .column-menu button { color: var(--brand-navy); }
+.redesigned-app .column-menu button:hover { background: #EAF1F8; }
+.redesigned-app .moment-card > div { flex: 1; min-width: 0; }
+.redesigned-app .moment-card > button { flex: 0 0 auto; }
+.redesigned-app .donut > div { background: var(--brand-navy); }
+.redesigned-app .day-heading small {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 7px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.redesigned-app .holiday-event {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 3px 4px;
+  border-radius: 4px;
+  font-size: 7px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.redesigned-app .holiday-key { display: flex; align-items: center; gap: 6px; margin-top: 9px; font-size: 8px; }
+.redesigned-app .holiday-key i { width: 7px; height: 7px; border-radius: 50%; }
+.redesigned-app .column-menu-wrap { position: relative; }
+.redesigned-app .column-menu {
+  position: absolute;
+  z-index: 5;
+  top: 100%;
+  right: 0;
+  display: grid;
+  gap: 3px;
+  width: 190px;
+  padding: 10px;
+  border: 1px solid #dce4ed;
+  border-radius: 9px;
+  box-shadow: 0 12px 30px #091a5820;
+}
+.redesigned-app .column-menu strong { padding: 4px 5px 7px; font-size: 10px; }
+.redesigned-app .column-menu button { border: 0; border-radius: 6px; background: transparent; padding: 7px 6px; text-align: left; font-size: 10px; }
+.redesigned-app .column-menu > span { padding: 5px; color: #344762; font-size: 10px; }
+.redesigned-app .more { color: var(--brand-navy); }
+.redesigned-app .panel { border-color: color-mix(in srgb, var(--chart-color) 13%, white); }
+.redesigned-app .button:not(.primary),
+.redesigned-app .theme-trigger { color: var(--brand-navy); }
+.redesigned-app .subtle-button,
+.redesigned-app .aside-link { color: var(--brand-navy); }
+.redesigned-app .success-card .legend-empty { color: #E4EAF5; }
+.redesigned-app .calendar-page,
+.redesigned-app .mini-month-head,
+.redesigned-app .aside-title,
+.redesigned-app .date-navigation strong,
+.redesigned-app .today-stats strong,
+.redesigned-app .upcoming-item b,
+.redesigned-app .month-view-head span,
+.redesigned-app .mini-weekdays span,
+.redesigned-app .day-heading b,
+.redesigned-app .month-cell b,
+.redesigned-app .today-event div b,
+.redesigned-app .event-time,
+.redesigned-app .today-badge { color: var(--brand-navy); }
+.redesigned-app .mini-grid button,
+.redesigned-app .month-cell.outside > b,
+.redesigned-app .time-axis span,
+.redesigned-app .mini-weekdays span,
+.redesigned-app .date-navigation button,
+.redesigned-app .view-switch button,
+.redesigned-app .today-stats span,
+.redesigned-app .upcoming-item small,
+.redesigned-app .today-badge { color: #344762; }
+.redesigned-app .month-cell.is-today > b,
+.redesigned-app .day-heading.current > b,
+.redesigned-app .mini-grid button.selected { color: #fff; }
+.redesigned-app .view-switch button.active { background: var(--brand-navy); color: #fff; }
+.redesigned-app .month-event { color: var(--brand-navy); }
+.redesigned-app .calendar-event { color: var(--brand-navy); }
+.redesigned-app .calendar-event small { color: #344762; }
+.redesigned-app .nav-count,
+.redesigned-app .count { color: var(--brand-navy); }
+.redesigned-app .holiday-key { font-size: 9px; }
+
+/* Larger type and controls for comfortable reading. */
+.redesigned-app .nav { font-size: 15px; padding: 13px 12px; }
+.redesigned-app .section-label { font-size: 12px; }
+.redesigned-app .sidebar-label { font-size: 14px; padding-block: 11px; }
+.redesigned-app .sidebar-success > span { font-size: 11px; }
+.redesigned-app .sidebar-success strong { font-size: 26px; }
+.redesigned-app .sidebar-success small { font-size: 12px; }
+.redesigned-app .crumb { font-size: 14px; }
+.redesigned-app .topbar { padding-bottom: 28px; }
+.redesigned-app .theme-trigger { padding: 11px 14px; font-size: 14px; }
+.redesigned-app .board-head h1,
+.redesigned-app .dashboard-header h1,
+.redesigned-app .calendar-toolbar h1 { font-size: 34px; }
+.redesigned-app .subtitle,
+.redesigned-app .dashboard-header .subtitle,
+.redesigned-app .calendar-toolbar .subtitle { font-size: 15px; }
+.redesigned-app .eyebrow { font-size: 12px; }
+.redesigned-app .button { padding: 12px 16px; font-size: 14px; }
+.redesigned-app .profile-stat { padding: 18px 16px; gap: 12px; }
+.redesigned-app .profile-stat small { font-size: 13px; }
+.redesigned-app .profile-stat strong { font-size: 27px; }
+.redesigned-app .profile-stat span:not(.stat-icon) { font-size: 13px; }
+.redesigned-app .profile-stat button { font-size: 12px; }
+.redesigned-app .success-card,
+.redesigned-app .moment-card,
+.redesigned-app .week-card,
+.redesigned-app .today-card { padding: 23px; }
+.redesigned-app .dark-kicker { font-size: 11px; }
+.redesigned-app .success-card h2 { font-size: 22px; }
+.redesigned-app .success-card-head p,
+.redesigned-app .moment-card p { font-size: 14px; }
+.redesigned-app .legend-row { font-size: 13px; }
+.redesigned-app .legend-row b,
+.redesigned-app .legend-row small { font-size: 12px; }
+.redesigned-app .success-insight { font-size: 13px; }
+.redesigned-app .success-insight button,
+.redesigned-app .subtle-button { font-size: 13px; }
+.redesigned-app .card-heading h2 { font-size: 20px; }
+.redesigned-app .bar-day small,
+.redesigned-app .bar-day > b,
+.redesigned-app .bar-count { font-size: 12px; }
+.redesigned-app .week-footer { font-size: 12px; }
+.redesigned-app .today-event div b { font-size: 14px; }
+.redesigned-app .today-event div small,
+.redesigned-app .event-time,
+.redesigned-app .empty-today p,
+.redesigned-app .empty-today button { font-size: 13px; }
+.redesigned-app .moment-card h2 { font-size: 19px; }
+.redesigned-app .moment-card > button { padding: 12px 14px; font-size: 13px; }
+.redesigned-app .column-title { font-size: 15px; }
+.redesigned-app .count { font-size: 12px; }
+.redesigned-app .card { padding: 16px; }
+.redesigned-app .card h3 { font-size: 16px; }
+.redesigned-app .card-note { font-size: 14px; }
+.redesigned-app .tag { font-size: 11px; }
+.redesigned-app .due { font-size: 12px; }
+.redesigned-app .add-card,
+.redesigned-app .filter,
+.redesigned-app .manage-filter { font-size: 13px; }
+.redesigned-app .calendar-controls button,
+.redesigned-app .date-navigation strong { font-size: 13px; }
+.redesigned-app .mini-month-head,
+.redesigned-app .aside-title { font-size: 14px; }
+.redesigned-app .mini-weekdays span { font-size: 10px; }
+.redesigned-app .mini-grid button { width: 30px; height: 30px; font-size: 12px; }
+.redesigned-app .today-stats strong { font-size: 24px; }
+.redesigned-app .today-stats span,
+.redesigned-app .aside-link { font-size: 12px; }
+.redesigned-app .upcoming-item b { font-size: 13px; }
+.redesigned-app .upcoming-item small { font-size: 11px; }
+.redesigned-app .day-heading > span,
+.redesigned-app .time-axis span { font-size: 11px; }
+.redesigned-app .day-heading b { font-size: 15px; }
+.redesigned-app .day-heading small { font-size: 9px; }
+.redesigned-app .calendar-event b { font-size: 10px; }
+.redesigned-app .calendar-event span { font-size: 12px; }
+.redesigned-app .calendar-event small { font-size: 10px; }
+.redesigned-app .month-view-head span { font-size: 12px; }
+.redesigned-app .month-cell { min-height: 104px; padding: 7px; }
+.redesigned-app .month-cell > b { font-size: 13px; }
+.redesigned-app .month-event,
+.redesigned-app .holiday-event { font-size: 10px; }
+.redesigned-app .holiday-key { font-size: 11px; }
+.redesigned-app .theme-popover { width: 290px; padding: 18px; }
+.redesigned-app .theme-popover > strong { font-size: 15px; }
+.redesigned-app .theme-popover > span { font-size: 13px; }
+.redesigned-app .theme-swatches { gap: 11px; margin-top: 15px; }
+.redesigned-app .theme-swatches button { width: 42px; height: 42px; }
+.redesigned-app .theme-custom-color { margin-top: 17px; padding-top: 14px; border-top: 1px solid #dce4ed; }
+.redesigned-app .theme-custom-color > label { display: block; margin-bottom: 8px; color: var(--brand-navy); font-size: 13px; font-weight: 700; }
+.redesigned-app .theme-custom-color > div { display: flex; align-items: center; gap: 9px; }
+.redesigned-app .theme-custom-color input[type="color"] { width: 48px; height: 44px; padding: 3px; border: 1px solid #b9c5d4; border-radius: 8px; background: white; cursor: pointer; }
+.redesigned-app .theme-custom-color input[type="text"] { min-width: 0; width: 100%; height: 44px; padding: 0 11px; border: 1px solid #b9c5d4; border-radius: 8px; color: var(--brand-navy); background: white; font-size: 15px; font-family: ui-monospace, monospace; text-transform: uppercase; }
+.redesigned-app .theme-custom-color small { display: block; margin-top: 6px; color: #8b2f2f; font-size: 12px; }
+.redesigned-app .column-menu strong { font-size: 12px; }
+.redesigned-app .column-menu button,
+.redesigned-app .column-menu > span { font-size: 12px; }
+.redesigned-app .modal h2 { font-size: 24px; }
+.redesigned-app .form-row > label,
+.redesigned-app .form-row > input,
+.redesigned-app .form-row textarea,
+.redesigned-app .form-row select { font-size: 15px; }
+.redesigned-app .modal-title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.redesigned-app .modal-title-row h2 { margin-bottom: 16px; }
+.redesigned-app .modal-close { width: 38px; height: 38px; margin-top: -12px; border: 0; border-radius: 50%; color: var(--brand-navy); background: #EAF1F8; font-size: 24px; }
+.redesigned-app .column { background: #F6F0E4; }
+.redesigned-app .sidebar,
+.redesigned-app .section-label,
+.redesigned-app .nav,
+.redesigned-app .sidebar-label,
+.redesigned-app .crumb,
+.redesigned-app .crumb strong,
+.redesigned-app .board-head h1,
+.redesigned-app .dashboard-header h1,
+.redesigned-app .calendar-toolbar h1,
+.redesigned-app .board-head > div > .subtitle,
+.redesigned-app .dashboard-header .subtitle,
+.redesigned-app .calendar-toolbar .subtitle { color: var(--canvas-ink); }
+.redesigned-app .logo-brand { width: max-content; max-width: 100%; padding: 7px; border-radius: 10px; background: #F6F0E4; }
+.redesigned-app .logo-brand img { width: min(164px, 100%); }
+.redesigned-app .nav.active { color: var(--canvas-ink); }
+.redesigned-app .dashboard-header .eyebrow,
+.redesigned-app .calendar-toolbar .eyebrow,
+.redesigned-app .redesigned-board-head .eyebrow,
+.redesigned-app .filters .filter { color: var(--canvas-ink); }
+.redesigned-app .filters .filter.selected { color: var(--canvas-ink); background: color-mix(in srgb, var(--canvas-ink) 12%, transparent); }
+
+@media(max-width:800px) {
+  .redesigned-app .theme-popover { max-width: calc(100vw - 28px); }
+  .redesigned-app .logo-brand { width: 86px; max-width: 86px; padding: 3px; }
+  .redesigned-app .logo-brand img { width: 80px; }
+}
+
+@media(max-width:800px) {
+  .redesigned-app .sidebar { background: var(--canvas-color); }
+  .redesigned-app .dashboard-grid { grid-template-columns: 1fr; }
+}

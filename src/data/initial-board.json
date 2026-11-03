@@ -1,0 +1,37 @@
+{
+  "board": {
+    "title": "Vida pessoal",
+    "subtitle": "Um passo de cada vez. Seu espaço para organizar a vida.",
+    "backgroundColor": "#F6F0E4"
+  },
+  "columns": [
+    { "id": "todo", "title": "A fazer", "color": "#d7a77d" },
+    { "id": "doing", "title": "Em andamento", "color": "#91a4bc" },
+    { "id": "waiting", "title": "Aguardando", "color": "#d3ba61" },
+    { "id": "done", "title": "Concluído", "color": "#75a186" }
+  ],
+  "labels": [
+    { "id": "pessoal", "name": "Pessoal", "color": "#F8E8F3" },
+    { "id": "trabalho", "name": "Trabalho", "color": "#EAF1F8" },
+    { "id": "casa", "name": "Casa", "color": "#FBF8E0" },
+    { "id": "saude", "name": "Saúde", "color": "#EAF1F8" }
+  ],
+  "tasks": [
+    { "id": "1", "title": "Planejar a semana com calma", "details": "Separar prioridades e deixar espaço para pausas.", "dueDate": "2026-10-30", "columnId": "todo", "labelIds": ["pessoal"] },
+    { "id": "2", "title": "Marcar consulta no dentista", "details": "Ver horários disponíveis na próxima semana.", "dueDate": "2026-10-31", "columnId": "todo", "labelIds": ["saude"] },
+    { "id": "3", "title": "Organizar documentos da viagem", "details": "Passaporte, reservas e seguro.", "dueDate": "2026-11-05", "columnId": "todo", "labelIds": ["pessoal"] },
+    { "id": "4", "title": "Revisar orçamento do mês", "details": "Conferir assinaturas e despesas fixas.", "dueDate": "2026-10-29", "columnId": "doing", "labelIds": ["pessoal"] },
+    { "id": "5", "title": "Enviar proposta atualizada", "details": "Incluir os ajustes conversados na reunião.", "dueDate": "2026-10-30", "columnId": "doing", "labelIds": ["trabalho"] },
+    { "id": "6", "title": "Pesquisar aula de yoga", "details": "Preferência por horários no fim da tarde.", "dueDate": "", "columnId": "waiting", "labelIds": ["saude"] },
+    { "id": "7", "title": "Trocar lâmpada da varanda", "details": "Comprar uma lâmpada de luz quente.", "dueDate": "2026-10-28", "columnId": "waiting", "labelIds": ["casa"] },
+    { "id": "8", "title": "Fazer mercado da semana", "details": "", "dueDate": "2026-10-27", "columnId": "done", "labelIds": ["casa"] }
+  ],
+  "events": [
+    { "id": "e1", "title": "Caminhada no parque", "details": "Começar o dia ao ar livre", "date": "2026-10-26", "startTime": "09:00", "endTime": "10:00", "color": "#dce8f8", "category": "Pessoal" },
+    { "id": "e2", "title": "Aula de idioma", "details": "Revisar a unidade 4", "date": "2026-10-27", "startTime": "10:00", "endTime": "11:00", "color": "#e8e0f5", "category": "Estudos" },
+    { "id": "e3", "title": "Organizar a semana", "details": "Planejar prioridades", "date": "2026-10-28", "startTime": "09:00", "endTime": "10:00", "color": "#dcefe6", "category": "Pessoal" },
+    { "id": "e4", "title": "Consulta médica", "details": "Levar resultados dos exames", "date": "2026-10-29", "startTime": "10:30", "endTime": "11:30", "color": "#fae3d9", "category": "Saúde" },
+    { "id": "e5", "title": "Aula de pilates", "details": "Levar roupa confortável", "date": "2026-10-30", "startTime": "14:00", "endTime": "15:00", "color": "#dcefe6", "category": "Saúde" },
+    { "id": "e6", "title": "Mercado da semana", "details": "Feira e itens de casa", "date": "2026-10-31", "startTime": "10:00", "endTime": "11:30", "color": "#faead2", "category": "Casa" }
+  ]
+}
